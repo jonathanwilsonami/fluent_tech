@@ -1,8 +1,72 @@
+##### Strings #####
+
 ##### Format specifier #####
 >3d
 0.2f
 
 ##### File input and output ##### 
+# Questions
+"""
+How do you open a file for reading in Python?
+How do you open a file for writing in Python?
+What is the difference between the r and w modes when opening a file?
+How can you read the entire content of a file into a string?
+How can you write a string to a file?
+How do you read a file line by line in Python?
+How can you append to an existing file without overwriting its content?
+Write a Python script to count the number of lines in a file.
+How do you handle file exceptions using try-except in Python?
+Write a Python script to read a file and print its content in reverse order.
+"""
 with open('data.txt') as file:
   for line in file:
     print(line, end="") #end omits the extra newline 
+
+##### Dictionaries #####
+# Questions
+"""
+How can you merge two dictionaries such that the values of overlapping keys are combined into a list?
+How can you merge two dictionaries and sum the values of overlapping keys?
+Write a function to merge multiple dictionaries where the values of overlapping keys are concatenated strings.
+How do you merge dictionaries stored in a list and handle overlapping keys by storing values in a set to avoid duplicates?
+How can you merge dictionaries and create a new dictionary where the keys are the same and the values are lists of all values associated with those keys in the original dictionaries?
+How would you merge two dictionaries by recursively merging nested dictionaries and summing the values of overlapping keys?
+Write a function that merges a list of dictionaries where the keys are the same, and the values are combined into a list of unique values.
+How can you merge dictionaries with keys representing dates and aggregate their values, assuming the values are numerical?
+Write a function to merge dictionaries where the values are sets of elements, ensuring the merged dictionary has combined sets without duplicates.
+How can you merge dictionaries by concatenating the string values of overlapping keys and retaining unique values for non-overlapping keys?
+"""
+
+#### System #####
+# Questions 
+"""
+What is sys.argv in Python?
+How do you import sys to use argv?
+How can you print all the command-line arguments passed to a Python script?
+How do you access the first command-line argument in a Python script?
+How can you count the number of command-line arguments passed to a Python script?
+Write a Python script that takes two command-line arguments and prints their sum.
+How would you handle the case where no command-line arguments are passed to a Python script?
+How can you convert command-line arguments to integers before performing arithmetic operations on them?
+Write a Python script that takes a list of numbers as command-line arguments and prints the largest number.
+Write a Python script that takes a filename as a command-line argument and prints the number of lines in the file.
+
+What is the purpose of the sys module in Python?
+How do you import the sys module in a Python script?
+How can you access the command-line arguments using the sys module?
+How do you use the sys.exit() function?
+How can you find out the Python version being used to run a script using the sys module?
+How do you get the path of the Python interpreter using the sys module?
+Write a Python script using the sys module to print the current recursion limit.
+How can you modify the system path to include a new directory using the sys module?
+Write a Python script that uses the sys module to print the standard input, output, and error file objects.
+How do you capture and handle exceptions using the sys module to print a custom error message and exit the program?
+
+"""
+
+
+
+
+####  #####
+# Questions 
+"""
