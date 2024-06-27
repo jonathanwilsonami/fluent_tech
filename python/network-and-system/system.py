@@ -1,4 +1,7 @@
 #### System #####
+import sys
+sys.argv[0] # Get name of program running 
+
 # Questions 
 """
 What is sys.argv in Python?
