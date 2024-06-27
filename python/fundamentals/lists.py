@@ -1,4 +1,10 @@
 ##### Lists #####
+# Def: Ordered collection of arbitrary objects. Can be heterogeneous. 
+# Methods: 
+.append(...)
+.insert(...)
+a[1][1][2] # Access nested list
+
 # Questions
 """
 How do you create an empty list in Python?
