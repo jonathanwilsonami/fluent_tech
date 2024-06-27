@@ -12,6 +12,12 @@ Write a Python script to count the number of lines in a file.
 How do you handle file exceptions using try-except in Python?
 Write a Python script to read a file and print its content in reverse order.
 """
+
+# with handles file and resource mang i.e. closes the file after it exits the with block. 
 with open('data.txt') as file:
   for line in file:
     print(line, end="") #end omits the extra newline 
+    
+# Reading large file in chunks 
+while(chunk := file.read(10000)):
+  print(chunk, end='')
