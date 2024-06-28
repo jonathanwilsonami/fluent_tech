@@ -1,4 +1,20 @@
 ##### Strings #####
+# Def: a string is a sequence of characters. They are immutable - any modifications on the string creates a new string. They allow for indexing, slicing and iteration. They are unicode meaning
+# they can store chars from any lang and special chars. 
+
+s = 'Hello'
+first_char = s[0]  # 'H'
+last_char = s[-1]  # 'o'
+
+s = 'Hello'
+sub_s = s[1:4]  # 'ell'
+
+s = 'Hello World'
+s_split = s.split()  # ['Hello', 'World']
+
+words = ['Hello', 'World']
+s_joined = ' '.join(words)  # 'Hello World'
+
 s = "some string/"
 
 s.strip()
