@@ -1,6 +1,51 @@
 ##### Dictionaries #####
+# Def: mutable data structures that allow you to store key-value pairs
+# Use Cases: Storing config settings, mapping user data, storing inventory data, presenting a graph, 
+
+student = {
+    "name": "John",
+    "age": 21,
+    "courses": ["Math", "CompSci"]
+}
+
+# Bracket access vs get access
+# The get method provides a way to access dictionary values more safely. If the key does not exist, it returns None (or a specified default value) instead of raising an error.
+
+student["grade"] = "A"
+del student["courses"]
+student.clear()
+
+for key, value in student.items():
+    print(key, value)
+
+# Graphs 
+graph = {
+    "A": ["B", "C"],
+    "B": ["A", "D"],
+    "C": ["A", "D"],
+    "D": ["B", "C"]
+}
+
 # Questions
 """
+Medium:
+How do you merge two dictionaries?
+How do you use dictionary comprehension to create a dictionary?
+How do you sort a dictionary by keys?
+How do you sort a dictionary by values?
+Explain the defaultdict from the collections module.
+What is the setdefault method used for?
+How do you invert a dictionary (swap keys and values)?
+How can you safely remove a key from a dictionary without causing a KeyError?
+What is the difference between items(), keys(), and values() methods?
+How do you use the pop method with dictionaries?
+How can you combine multiple dictionaries into one dictionary?
+What are dictionary views and how do they differ from lists?
+Explain how hash functions are used in dictionaries.
+How do you handle missing keys when accessing dictionary values?
+Describe how dictionaries are implemented in Python (e.g., hash tables).
+
+Hard:
 How can you merge two dictionaries such that the values of overlapping keys are combined into a list?
 How can you merge two dictionaries and sum the values of overlapping keys?
 Write a function to merge multiple dictionaries where the values of overlapping keys are concatenated strings.
@@ -11,4 +56,14 @@ Write a function that merges a list of dictionaries where the keys are the same,
 How can you merge dictionaries with keys representing dates and aggregate their values, assuming the values are numerical?
 Write a function to merge dictionaries where the values are sets of elements, ensuring the merged dictionary has combined sets without duplicates.
 How can you merge dictionaries by concatenating the string values of overlapping keys and retaining unique values for non-overlapping keys?
+Explain the concept of dictionary views and how they differ from lists.
+How do you handle nested dictionaries in Python?
+What are some ways to improve the performance of dictionary operations?
+Describe the time complexity of common dictionary operations.
+How do you implement a multi-level dictionary update?
+What is the ChainMap class from the collections module and how is it used?
+Explain how to perform deep copying of dictionaries.
+How can you flatten a nested dictionary structure?
+How would you implement a dictionary-like class with additional functionality?
+What are some common pitfalls and best practices when working with dictionaries in Python?
 """
