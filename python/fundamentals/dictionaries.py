@@ -1,6 +1,8 @@
-##### Dictionaries #####
-# Def: mutable data structures that allow you to store key-value pairs
+"""
+# Def: mutable data structures that allow you to store key-value pairs. Ordered by the when they are inserted. 
 # Use Cases: Storing config settings, mapping user data, storing inventory data, presenting a graph, 
+
+"""
 
 student = {
     "name": "John",
