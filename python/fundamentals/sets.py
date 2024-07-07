@@ -1,5 +1,5 @@
 """ Def: unordered collection of unique elements. While a set is mutable (You can add or remove elements), elements in a set must be immutable, meaning they cannot be changed, 
-but the set itself is mutable, so you can add or remove elements.
+but the set itself is mutable, so you can add or remove elements. They can not be indexed. Printing out puts won't always be in the same order. 
 
 Use Cases: 
 - Removing Duplicates: From a list of elements.
@@ -11,6 +11,7 @@ Use Cases:
 """
 
 my_set = {1, 2, 3}
+my_set.update({1, 2, 3})
 my_set.add(4)
 my_set.remove(2) # raises a KeyError exception when the item to delete is not found in the set
 my_set.discard(2) # does not raise any exceptions and does nothing if the item is not found in the set.
