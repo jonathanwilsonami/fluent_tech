@@ -2,6 +2,25 @@
 import sys
 sys.argv[0] # Get name of program running 
 
+# atexit - is a module in Python that provides a simple way to register functions that need to be executed upon the program's termination. 
+# These functions are executed in the reverse order of their registration. This module is useful for cleanup activities, such as closing files, releasing resources, or saving state.
+import atexit
+
+def cleanup_function():
+    print("Cleaning up before exiting...")
+
+def save_state():
+    print("Saving state...")
+
+atexit.register(cleanup_function)
+atexit.register(save_state)
+db_connection = connect_to_database()
+atexit.register(db_connection.close)
+def notify_users():
+    print("Application is exiting...")
+atexit.register(notify_users)
+
+
 # Questions 
 """
 What is sys.argv in Python?
