@@ -18,3 +18,56 @@ locale.setlocale(locale.LC_ALL, 'de_DE.UTF-8')
 ```
 __Garbage Collector__ - is a part of the Python memory management system that automatically frees up memory by removing objects that are no longer needed by the program. This helps prevent memory leaks and ensures that your program doesn't use more memory than necessary. It uses a concept of reference counting. Every Python has a ref count which keeps track of how many refs point to that
 object. When the ref count drops to zero the object is no longer needed and Python can safly delete it. 
+
+__Floating-point Numbers__ - In Python they are stored as IEEE 754 double-precision (64 bit) values. 
+
+__Digit Seperator__ - 
+
+```python
+my_num = 2_000_000 # For better readability. Underscore is not read.
+print(my_num)
+# Output: 2000000
+```
+
+__Expression__ - Computation that evaluates to a concrete value. Combination of literal, names, operators and function or methods.
+
+```python
+val = 2 + 3 * 5 + sqrt(6+7) + c["a"] + b[1]
+```
+
+__Reference vs Copy__ - 
+```python
+a = [1,2,3]
+b = a
+c = a.copy()
+d = copy.deepcopy(a)
+```
+b is a reference to a so any object that gets changed is also changed in the other.
+c is a new object. 
+
+__Shallow Copy__
+Creates a new object but inserts refs into it. Changes to nested objects affect both the original and the copy. 
+
+__Deep Copy__
+New object created and recursivly adds copies of objects found in the originial. Changes to the original do not affect the copy even for nested items. 
+
+__Object Equality__
+- Equal when:
+  - Lists/Tuples - equal size, equal elements, same order
+  - Dict - same keys and items
+  - Set - same elements
+if x is y - tests the identities of x and y (memory location) not their actual values.
+
+__Unpacking Items__
+
+```python
+a = [1,2,3]
+d = {}
+d["a], d["b"], d["c"] = a
+
+items = [1,2,3,4,5]
+a, *extra, b = items
+# a = 1
+# extra = [2,3,4]
+# b = 5
+```
