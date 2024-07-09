@@ -52,22 +52,13 @@ Easy
 - How can you sort a list in ascending order?
 - How do you reverse the elements of a list?
 - Write a Python script to find the largest number in a list of integers.
-
-Medium 
-How do you find the length of a list in Python?
-How can you add an element to the end of a list?
-What is the difference between append() and extend() methods in lists?
-How do you remove an element from a list by its value?
-How do you remove an element from a list by its index?
-How can you sort a list in ascending order?
-How do you reverse the order of elements in a list?
-What is list slicing and how does it work?
-How do you find the index of the first occurrence of an element in a list?
-How do you check if an element exists in a list?
+- How do you check if an element exists in a list?
+- How do you find the intersection of two lists?
+- How can you remove duplicate elements from a list?
 
 Hard
-How can you remove duplicate elements from a list?
-How do you find the intersection of two lists?
+
+
 How do you flatten a nested list?
 How can you rotate a list by n positions?
 How do you find the most common element in a list?
@@ -105,6 +96,31 @@ largest_number = numbers[0]
 for number in numbers:
     if number > largest_number:
         largest_number = number
-
 # Or
 largest_number = max(numbers) # O(n) time complexity
+
+# Use of index
+numbers = [1, 2, 3, 4, 3, 5, 3]
+
+# Find the first occurrence of the number 3
+index = numbers.index(3)
+print(index)  # Output: 2
+
+# Find the occurrence of the number 3 starting from index 3
+index = numbers.index(3, 3)
+print(index)  # Output: 4
+
+# Find the occurrence of the number 3 between index 4 and 7
+index = numbers.index(3, 4, 7)
+print(index)  # Output: 6
+
+# How do you find the intersection of two lists?
+list1 = [1, 2, 3, 4, 5]
+list2 = [4, 5, 6, 7, 8]
+
+# Using & operator
+intersection = list(set(list1) & set(list2))
+print(intersection)  # Output: [4, 5]
+
+intersection = np.intersect1d(list1, list2)
+print(intersection)  # Output: [4 5]
