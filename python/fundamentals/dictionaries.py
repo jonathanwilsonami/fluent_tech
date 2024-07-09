@@ -28,6 +28,11 @@ graph = {
     "D": ["B", "C"]
 }
 
+keys = ['a', 'b', 'c']
+default_value = 0
+new_dict = dict.fromkeys(keys, default_value)
+print(new_dict)  # Output: {'a': 0, 'b': 0, 'c': 0}
+
 # Questions
 """
 Medium:
@@ -69,3 +74,5 @@ How can you flatten a nested dictionary structure?
 How would you implement a dictionary-like class with additional functionality?
 What are some common pitfalls and best practices when working with dictionaries in Python?
 """
+
+
