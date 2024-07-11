@@ -70,4 +70,10 @@ a, *extra, b = items
 # a = 1
 # extra = [2,3,4]
 # b = 5
+# Example list of 3-parameter tuples
+tuples_list = [(1, 'a', True), (2, 'b', False), (3, 'c', True)]
+
+# Unpacking the tuples in a for loop
+for x, y, z in tuples_list:
+    print(f"x: {x}, y: {y}, z: {z}")
 ```
