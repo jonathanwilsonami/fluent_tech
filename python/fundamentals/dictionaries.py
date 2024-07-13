@@ -33,6 +33,26 @@ default_value = 0
 new_dict = dict.fromkeys(keys, default_value)
 print(new_dict)  # Output: {'a': 0, 'b': 0, 'c': 0}
 
+# Objects are first class objects. Using lambda functions. 
+def format_value(value, format_type):
+    formats = {
+        "uppercase": lambda x: str(x).upper(),
+        "lowercase": lambda x: str(x).lower(),
+        "titlecase": lambda x: str(x).title(),
+        "reverse": lambda x: str(x)[::-1],
+        "hex": lambda x: hex(int(x)),
+        "binary": lambda x: bin(int(x)),
+        "octal": lambda x: oct(int(x)),
+        "float": lambda x: f"{float(x):.2f}",
+        "currency": lambda x: f"${float(x):.2f}",
+        "percentage": lambda x: f"{float(x) * 100:.2f}%"
+    }
+
+    if format_type in formats:
+        return formats[format_type](value)
+    else:
+        return "Invalid format type"
+
 # Questions
 """
 Medium:
